@@ -161,6 +161,65 @@
 		
 		<h5 id="footer">For more information on Jake, try yelling his name real loud to see if he comes.</h5>
 		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
 		
+			$( ".tabContent" ).hide();
+			$( "#aboutContent" ).show();
+			$( "#about").css("background-color", "rgb(150,150,210)");
+			
+			$( ".tab" ).click(function() {
+				$(this).css("background-color", "rgb(150,150,210)");
+			});
+			
+			
+			// About tab click
+			$( "#about" ).click(function() {
+				$( ".tabContent" ).hide();
+				$( "#aboutContent" ).animate({
+				height: "toggle"
+				}, 1000, function() {
+				});
+			});
+			
+			// History tab click
+			$( "#history" ).click(function() {
+				$( ".tabContent" ).hide();
+				$( "#historyContent" ).animate({
+				height: "toggle"
+				}, 1000, function() {
+				});
+			});
+			
+			// Likes tab click
+			$( "#likes" ).click(function() {
+				$( ".tabContent" ).hide();
+				$( "#likesContent" ).animate({
+				height: "toggle"
+				}, 1000, function() {
+				});
+			});
+			
+			// Dislikes tab click
+			$( "#dislikes" ).click(function() {
+				$( ".tabContent" ).hide();
+				$( "#dislikesContent" ).animate({
+				height: "toggle"
+				}, 1000, function() {
+				});
+			});
+			
+			// Ambitions tab click
+			$( "#ambitions" ).click(function() {
+				$( ".tabContent" ).hide();
+				$( "#ambitionsContent" ).animate({
+				height: "toggle"
+				}, 1000, function() {
+				});
+			});
+			
+			
+		</script>
+                     
     </body>
 </html>
