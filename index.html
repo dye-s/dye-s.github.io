@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Project: Sample Site</title>
+		
+		<style>
+		
+			body {
+				background-color: rgb(245, 245, 245);
+			}
+			
+			#header {
+			text-align: left;
+			font-size: 20px;
+			position: relative;
+			left: 64px;
+			color: rgb(230, 230, 230);
+			}
+			
+			#tagline {
+				text-align: left;
+				font-size: 15px;
+				position: relative;
+				left: 64px;
+				bottom: 14px;
+				color: rgb(230, 230, 230);
+			}
+			
+			.tab {
+				position: relative;
+				left: 285px;
+				bottom: 65px;
+				background-color: rgb(75, 100, 245);
+				color: rgb(255, 255, 255);
+				height: 40px;
+				width: 140px;
+				font-size: 22px;
+				font-family: monospace;
+			}
+			
+			.tab:hover {
+				background-color: rgb(150, 150, 150);
+			}
+						
+			.tabContent {
+				font-family: monospace;
+				font-size: 25px;
+				position: absolute;
+				left: 100px;
+				right: 400px;
+				top: 60px;
+				background-color: rgb(150, 150, 210);
+				border-left: solid;
+				border-right: solid;
+				border-bottom: solid;
+				border-width: 20px;
+				border-color: rgb(150, 150, 210);
+			}
+			
+			#backgroundFiller {
+				position: absolute;
+				left: 100px;
+				right: 400px;
+				top: 70px;
+				bottom: 70px;
+				background-color: rgb(150, 150, 210);
+				border-left: solid;
+				border-right: solid;
+				border-bottom: solid;
+				border-width: 20px;
+				border-color: rgb(150, 150, 210);
+			}
+			
+			#jake {
+				
+				position: absolute;
+				right: 20px;
+				bottom: 150px;
+				border-style: solid;
+				border-color: rgb(75, 100, 245);
+				border-width: 2px;
+				width: 300px;
+			}
+		
+			.contentHeader {
+				opacity: 0.5;
+			}
+			
+			#footer {
+				position: absolute;
+				bottom: 25px;
+				left: 450px;
+				opacity: 0.8;
+			}
+			
+			#sideBar {
+				float: left;
+				position: absolute;
+				background-color: rgb(75, 100, 245);
+				height: 1000px;
+				top: 0px;
+				color: rgb(75, 100, 245);
+			}
+			
+			#topBar {
+				position: absolute;
+				left: 0px;
+				right: 0px;
+				top: 10px;
+				bottom: 551px;
+				background-color: rgb(75, 100, 245);
+				color: rgb(75, 100, 245);
+			}
+					
+		</style>
+		
+    </head>
+    <body>
+			
+		<div id="sideBar">Side Bar</div>
+		
+		<div id="topBar">Top Bar</div>
+	
+		<h1 id="header">Sample Site</h1>
+				
+		<h2 id="tagline"><em>All about Jake the dog Dye (Jake)</em></h2>
+		
+		<button id="about" class="tab">About</button>
+		
+		<button id="history" class="tab">History</button>
+		
+		<button id="likes" class="tab">Likes</button>
+		
+		<button id="dislikes" class="tab">Dislikes</button>
+		
+		<button id="ambitions" class="tab">Ambitions</button>
+		
+		<h4 id="backgroundFiller">background filler</h4>
+		<h4 class="tabContent" id="aboutContent">
+		<p class="contentHeader"><em>About</em></p>
+		Jake's primary residence is in Kennesaw, GA. He is presumed to be a mix of the Labrador Retriever and Newfoundland breeds, and he is one hundred percent the bestest doggo. He can usually be found either hanging out inside his house or hunting squirrels in the yard.</h4>
+		
+		<h4 class="tabContent" id="historyContent">
+		<p class="contentHeader"><em>History</em></p>
+		In 2014, Jake was found as a puppy in a barrel in the woods of a paintball field in Atlanta, GA. It is assumed that he was born in the month of August, therefore his birthday is most frequently celebrated on the first day of August. He lived in Atlanta for three years before moving to Kennesaw.</h4>
+		
+		<h4 class="tabContent" id="likesContent">
+		<p class="contentHeader"><em>Likes</em></p>
+		Jake's interests include: <ul><li>food</li> <li>treats</li> <li>squeaky toys</li> <li>beef bones</li> <li>going outside</li><li>killing squirrels</li> <li>going inside</li> <li>invading others' personal space</li></ul></h4>
+		
+		<h4 class="tabContent" id="dislikesContent">
+		<p class="contentHeader"><em>Dislikes</em></p>
+		Jake does not like the following: <ul><li>loud noises</li> <li>invasions of his personal space</li> <li>intruders</li><li>Denver (the dog, not the city)</li></ul></h4>
+		
+		<h4 class="tabContent" id="ambitionsContent">
+		<p class="contentHeader"><em>Ambitions</em></p>
+		Jake aspires to smell and/or lick every pee puddle in the Metro-Atlanta area.</h4>
+		
+		<a href="https://imgbox.com/WWwHtr1N" target="_blank"><img src="https://thumbs2.imgbox.com/39/c4/WWwHtr1N_t.jpg" alt="Jake Dye" id="jake"/></a>
+		
+		<h5 id="footer">For more information on Jake, try yelling his name real loud to see if he comes.</h5>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+		
+			$( ".tabContent" ).hide();
+			$( "#aboutContent" ).show();
+			$( "#about").css("background-color", "rgb(150,150,210)");
+			
+			$( ".tab" ).click(function() {
+				$(this).css("background-color", "rgb(150,150,210)");
+			});
+			
+			
+			// About tab click
+			$( "#about" ).click(function() {
+				$( ".tabContent" ).hide();
+				$( "#aboutContent" ).animate({
+				height: "toggle"
+				}, 1000, function() {
+				});
+			});
+			
+			// History tab click
+			$( "#history" ).click(function() {
+				$( ".tabContent" ).hide();
+				$( "#historyContent" ).animate({
+				height: "toggle"
+				}, 1000, function() {
+				});
+			});
+			
+			// Likes tab click
+			$( "#likes" ).click(function() {
+				$( ".tabContent" ).hide();
+				$( "#likesContent" ).animate({
+				height: "toggle"
+				}, 1000, function() {
+				});
+			});
+			
+			// Dislikes tab click
+			$( "#dislikes" ).click(function() {
+				$( ".tabContent" ).hide();
+				$( "#dislikesContent" ).animate({
+				height: "toggle"
+				}, 1000, function() {
+				});
+			});
+			
+			// Ambitions tab click
+			$( "#ambitions" ).click(function() {
+				$( ".tabContent" ).hide();
+				$( "#ambitionsContent" ).animate({
+				height: "toggle"
+				}, 1000, function() {
+				});
+			});
+			
+			
+		</script>
+                     
+    </body>
+</html>
