@@ -39,10 +39,10 @@
 				font-family: monospace;
 			}
 			
-			.tab:hover {
+		/*	.tab:hover {
 				background-color: rgb(150, 150, 150);
 			}
-						
+		*/				
 			.tabContent {
 				font-family: monospace;
 				font-size: 25px;
@@ -94,33 +94,31 @@
 				opacity: 0.8;
 			}
 			
-			#sideBar {
-				float: left;
+			.sideBar {
 				position: absolute;
-				background-color: rgb(75, 100, 245);
-				height: 1000px;
-				top: 0px;
-				color: rgb(75, 100, 245);
+				width: 4.5%;
+				height: 100%;
+				left: 0.6%;
+				background-color: rgb(150, 150, 210);
 			}
 			
-			#topBar {
+			.topBar {
 				position: absolute;
-				left: 0px;
-				right: 0px;
-				top: 10px;
-				bottom: 551px;
+				width: 100%;
+				height: 9%;
+				top: 1%;
 				background-color: rgb(75, 100, 245);
-				color: rgb(75, 100, 245);
 			}
+			
 					
 		</style>
 		
     </head>
     <body>
 			
-		<div id="sideBar">Side Bar</div>
+		<div class="sideBar"></div>
 		
-		<div id="topBar">Top Bar</div>
+		<div class="topBar"></div>
 	
 		<h1 id="header">Sample Site</h1>
 				
@@ -163,17 +161,23 @@
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
-		
+		$(document).ready(function() {
+        
 			$( ".tabContent" ).hide();
 			$( "#aboutContent" ).show();
 			$( "#about").css("background-color", "rgb(150,150,210)");
 			
-			$( ".tab" ).click(function() {
+		/*	$(".tab").hover(function(){
+				$(this).css("background-color", "rgb(150, 150, 150)");
+				}, function(){
+				$(this).css("background-color", "rgb(75, 100, 245)");
+			}); */
+		
+			$( ".tab" ).click(function() {	
 				$( ".tab" ).css("background-color", "rgb(75, 100, 245)");
-				$(this).css("background-color", "rgb(150,150,210)");
+				$(this).css("background-color", "rgb(150,150,210)");			
 			});
-			
-			
+						
 			// About tab click
 			$( "#about" ).click(function() {
 				$( ".tabContent" ).hide();
@@ -219,7 +223,7 @@
 				});
 			});
 			
-			
+		});	
 		</script>
                      
     </body>
