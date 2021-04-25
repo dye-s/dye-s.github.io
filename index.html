@@ -14,7 +14,7 @@
 			text-align: left;
 			font-size: 20px;
 			position: relative;
-			left: 64px;
+			left: 53px;
 			color: rgb(230, 230, 230);
 			}
 			
@@ -22,7 +22,7 @@
 				text-align: left;
 				font-size: 15px;
 				position: relative;
-				left: 64px;
+				left: 52px;
 				bottom: 14px;
 				color: rgb(230, 230, 230);
 			}
@@ -39,10 +39,6 @@
 				font-family: monospace;
 			}
 			
-		/*	.tab:hover {
-				background-color: rgb(150, 150, 150);
-			}
-		*/				
 			.tabContent {
 				font-family: monospace;
 				font-size: 25px;
@@ -122,7 +118,7 @@
 	
 		<h1 id="header">Sample Site</h1>
 				
-		<h2 id="tagline"><em>All about Jake the dog Dye (Jake)</em></h2>
+		<h2 id="tagline"><em>All about Jake (the dog) Dye "Jake"</em></h2>
 		
 		<button id="about" class="tab">About</button>
 		
@@ -160,19 +156,17 @@
 		<h5 id="footer">For more information on Jake, try yelling his name real loud to see if he comes.</h5>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.css"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css"></script>
         <script>
 		$(document).ready(function() {
         
 			$( ".tabContent" ).hide();
 			$( "#aboutContent" ).show();
 			$( "#about").css("background-color", "rgb(150,150,210)");
-			
-		/*	$(".tab").hover(function(){
-				$(this).css("background-color", "rgb(150, 150, 150)");
-				}, function(){
-				$(this).css("background-color", "rgb(75, 100, 245)");
-			}); */
-		
+							
 			$( ".tab" ).click(function() {	
 				$( ".tab" ).css("background-color", "rgb(75, 100, 245)");
 				$(this).css("background-color", "rgb(150,150,210)");			
@@ -224,6 +218,7 @@
 			});
 			
 		});	
+		
 		</script>
                      
     </body>
